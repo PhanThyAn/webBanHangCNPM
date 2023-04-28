@@ -238,8 +238,10 @@
                                         </tr>
 
                                         <tr>
+                                            <%-- Usecase 5 - Đặt hàng : 1. Click vào giỏ hàng--%>
                                             <td colspan="3" class="d-flex justify-content-center">
                                                 <div class="cart-button">
+                                                    <%-- Usecase 5 - Đặt hàng: 2. Chuyển đến trang giỏ hàng--%>
                                                     <a href="/cart_detail" title="View Cart">Xem giỏ hàng</a>
                                                     <a href="/checkout" title="Checkout">Thanh toán</a>
                                                 </div>

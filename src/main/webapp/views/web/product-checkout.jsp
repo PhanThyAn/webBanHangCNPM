@@ -125,6 +125,8 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade in active show" id="checkout-guest-form"
                                                  role="tabpanel">
+                                                <%-- Usecase 5 - Đặt hàng: 5. Nhập địa chỉ giao hàng--%>
+                                                <%-- Usecase 5 - Đặt hàng: 6. thiết lập thông tin thanh toán--%>
                                                 <form action="#" id="customer-form" class="js-customer-form"
                                                       method="post">
                                                     <div>
@@ -251,6 +253,7 @@
                                             </div>
                                             <div class="clearfix">
                                                 <div class="row">
+                                                    <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn đặt hàng--%>
                                                     <a href="/order_success"
                                                        class="continue btn btn-primary pull-xs-right" value="3"
                                                        style="margin-top: 15px;margin-bottom: 25px">Hoàn tất đặt

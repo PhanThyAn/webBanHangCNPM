@@ -125,8 +125,10 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <%-- Usecase 5 - Đặt hàng: 3. Click Đặt hàng--%>
+                                    <%-- Usecase 5 - Đặt hàng: 4. Chuyển đến trang đặt hàng--%>
                                     <a href="/checkout" class="continue btn btn-primary pull-xs-right">
-                                        Tiếp tục
+                                        Đặt hàng
                                     </a>
                                 </div>
                                 <div class="cart-grid-right col-xs-12 col-lg-3">

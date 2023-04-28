@@ -41,7 +41,10 @@ public class OrderSuccess extends HttpServlet {
         Cart cart = (Cart) request.getSession().getAttribute("cart");
         Collection<Product> listp = cart.getListProduct();
 
+//            Usecase 5 - Đặt hàng: 9. Kiểm tra thông tin thanh toán
+//            Usecase 5 - Đặt hàng: 10. Kiểm tra đăng nhâp
         UserModel user = (UserModel) request.getSession().getAttribute("user");
+//            Usecase 5 - Đặt hàng: 10.1 Yêu cầu  đăng nhập
         if (Objects.isNull(user)) {
             response.sendRedirect("/login");
 
@@ -58,10 +61,12 @@ public class OrderSuccess extends HttpServlet {
                 long money = cart.getTotal();
 
                 Date current = Date.valueOf(LocalDate.now());
+//                Usecase 5 - Đặt hàng: 11. addOrder()
                 Order od = new Order(orderid, u.getUserName(), "Tien mat", money, 0, current, " ", 0);
                 oderService.addOder(od);
                 od.setOder_id(orderid);
                 Collection<Product> productList = cart.getListProduct();
+//                Usecase 5 - Đặt hàng: 12. addOrderDetail()
                 for (Product p : productList) {
                     Order_detail orderDetail = new Order_detail(0, od, p.getProduct_id(), p.getPrice_sell(), p.getQuantity(), 0, (p.getPrice_sell() * p.getQuantity()));
                     oderService.addOrderDetail(orderDetail);

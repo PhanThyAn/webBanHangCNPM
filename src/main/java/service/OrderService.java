@@ -81,6 +81,7 @@ public class OrderService {
         return order;
     }
 
+//    Usecase 5 - Đặt hàng: 11. createOrder()
     public void addOder(Order o) {
         String sql = "INSERT INTO `order` (order_id, user_name, payment, total_money, fee, date_order, transport, status) VALUES(?,?,?,?,?,?,?,?)";
         PreparedStatement ps = null;
@@ -101,6 +102,7 @@ public class OrderService {
         }
     }
 
+//    Usecase 5 - Đặt hàng: 13. createOrderDetail()
     public void addOrderDetail(Order_detail detail) {
         String sql = "INSERT INTO order_detail (id_oder, id_product, price, amount, fee, total) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = null;
