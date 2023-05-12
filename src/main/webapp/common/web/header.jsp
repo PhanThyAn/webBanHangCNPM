@@ -128,10 +128,14 @@
 
                 <!-- search and acount -->
                 <div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
+                    <!-- Phan Thị An-->
+                    <!--4. Trang web sẽ gửi nội dung tìm kiếm lên hệ thống-->
                     <form method="get" action="/search">
-
+                        <!--1. Người dùng truy cập trang web bán hàng và chọn ô tìm kiếm sản phẩm trên thanh header của trang web. -->
                         <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                        <!--2. Người dùng nhập từ khóa tìm kiếm vào ô tìm kiếm-->
                         <input type="text" name="search" value="" required placeholder="Tìm kiếm" class="ui-autocomplete-input" autocomplete="off" >
+                       <!--3. Người dùng nhấp vào button Tìm kiếm hoặc nhấn phím Enter trên bàn phím để gửi yêu cầu tìm kiếm đến hệ thống-->
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>

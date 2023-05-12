@@ -50,28 +50,27 @@ public class SearchProductController extends HttpServlet {
         if(request.getParameter("display") != null && request.getParameter("display") != ""){
             display = request.getParameter("display");
         }
+        // nếu có số trang thì
         if(request.getParameter("page") != null && request.getParameter("page") != ""){
+            // lấy ra số trang đang ở hiện tại
             page = Integer.parseInt(request.getParameter("page"));
         }
+        // vị trí lấy từ offset
         int offset = (page-1) * limit;
-            if(request.getParameter("orderBy") != null && request.getParameter("orderBy") != ""){
-                orderBy = request.getParameter("orderBy");
-                sortBy =  request.getParameter("sortBy");
-                if(orderBy.equals("onsale")){
-                    list = ProductSearchService.searchByNameOnSale(textSearch, offset, limit);
-                    if(list != null)totalItem = list.size();
-                } else{
-                    list = ProductSearchService.searchByNameOderBy(textSearch, offset, limit,orderBy,sortBy);
-                    if(list != null)totalItem = list.size();
-                }
-            } else {
-                list = ProductSearchService.searchByName(textSearch, offset, limit);
-                if(list != null)totalItem = list.size();
-            }
-        totalPage = (int)(Math.ceil((double) totalItem/limit));
+            orderBy = request.getParameter("orderBy");
+            sortBy =  request.getParameter("sortBy");
+  //Phan Thị An_20130195 làm
+  // Use case 3: Chức năng Tìm kiếm
+    // 6. Hệ thống nhận về thông tin các sản phẩm khớp với trường đã nhập
+            list = list(request,response,orderBy,sortBy,textSearch,offset,limit,totalItem);
+            System.out.println("L" + list);
+            request.setAttribute("listPro",list);
+
+
+            if(list != null)totalItem = list.size();
+            totalPage = (int)(Math.ceil((double) totalItem/limit));
         request.setAttribute("totalItem",totalItem);
         request.setAttribute("textSearch",textSearch);
-        request.setAttribute("listPro",list);
         request.setAttribute("display",display);
         request.setAttribute("page",page);
         request.setAttribute("totalPage",totalPage);
@@ -87,6 +86,31 @@ public class SearchProductController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+    public List<ProductSearchModel> list(HttpServletRequest request, HttpServletResponse response,String orderBy,
+                                         String sortBy,String textSearch,int offset,int limit,int totalItem){
+        try {
+            List<ProductSearchModel> list;
+            if(request.getParameter("orderBy") != null && request.getParameter("orderBy") != ""){
+                if(orderBy.equals("onsale")){
+
+                        list = ProductSearchService.searchByNameOnSale(textSearch, offset, limit);
+
+                    if(list != null)totalItem = list.size();
+                } else{
+                    list = ProductSearchService.searchByNameOderBy(textSearch, offset, limit,orderBy,sortBy);
+                    if(list != null)totalItem = list.size();
+                }
+            } else {
+                list = ProductSearchService.searchByName(textSearch, offset, limit);
+
+            }
+            return  list;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 }

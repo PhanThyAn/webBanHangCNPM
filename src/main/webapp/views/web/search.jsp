@@ -147,6 +147,8 @@
                             </div>
                         </div>
                     </nav>
+          <!--Phan Thị An
+          Alternative Flow: 6.2 Nếu kết quả tìm kiếm là null thì hiển thị thông báo “Không tìm thấy nội dung bạn yêu cầu” trên trang seach.-->
                     <% if(listPro == null) {%>
                     <div class="container">
                         <div class="content">
@@ -159,7 +161,9 @@
                             </div>
                         </div>
                     </div>
-                    <%} else {%>
+                    <%}
+//  Basic Flow: 6.1 Nếu kết quả tìm kiếm không null thì trang seach sẽ hiển thị thông tin các sản phẩm.
+                    else {%>
                     <div class="container">
                         <div class="content">
                             <div class="row">
@@ -194,31 +198,31 @@
                                             <div class="col col-xs-12">
                                                 <div class="d-flex sort-by-row justify-content-end">
                                                     <div class="products-sort-order dropdown">
-                                                        <%if(orderBy.equals("name") && sortBy.equals("asc")){%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Theo ký tự, A to Z
-                                                        </button>
-                                                        <%} else if(orderBy.equals("name") && sortBy.equals("desc")){%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Theo ký tự, Z to A
-                                                        </button>
-                                                        <%} else if(orderBy.equals("price_sell") && sortBy.equals("asc")){%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Theo giá , từ thấp tới cao
-                                                        </button>
-                                                        <%} else if(orderBy.equals("price_sell") && sortBy.equals("desc")){%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Theo giá , từ cao tới thấp
-                                                        </button>
-                                                        <%}else if(orderBy.equals("onsale")){%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Có giảm giá
-                                                        </button>
-                                                        <%} else {%>
-                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                            Mặc định
-                                                        </button>
-                                                        <%}%>
+<%--                                                        <%if(orderBy.equals("name") && sortBy.equals("asc")){%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Theo ký tự, A to Z--%>
+<%--                                                        </button>--%>
+<%--                                                        <%} else if(orderBy.equals("name") && sortBy.equals("desc")){%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Theo ký tự, Z to A--%>
+<%--                                                        </button>--%>
+<%--                                                        <%} else if(orderBy.equals("price_sell") && sortBy.equals("asc")){%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Theo giá , từ thấp tới cao--%>
+<%--                                                        </button>--%>
+<%--                                                        <%} else if(orderBy.equals("price_sell") && sortBy.equals("desc")){%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Theo giá , từ cao tới thấp--%>
+<%--                                                        </button>--%>
+<%--                                                        <%}else if(orderBy.equals("onsale")){%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Có giảm giá--%>
+<%--                                                        </button>--%>
+<%--                                                        <%} else {%>--%>
+<%--                                                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">--%>
+<%--                                                            Mặc định--%>
+<%--                                                        </button>--%>
+<%--                                                        <%}%>--%>
                                                         <ul class="dropdown-menu" style="width: 200px;height: 230px;top:36px;border-radius: 4px">
                                                             <li><a class="dropdown-item" href="search?search=${textSearch}&page=<%=pageNum%>&display=<%=display%>">Mặc định</a></li>
                                                             <%--<li><a class="dropdown-item" href="living-room?page=<%=pageNum%>&display=<%=display%>&orderBy=">Sản phẩm mới</a></li>--%>
@@ -236,6 +240,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="tab-content product-items">
                                         <% if (display.equals("grid")){%>
                                         <div id="grid" class="related tab-pane fade active show">
@@ -244,9 +249,9 @@
                                                 <div class="item text-center col-md-3" >
                                                     <div class="product-miniature js-product-miniature item-one first-item" >
                                                         <div class="thumbnail-container border" >
-                                                            <a href = "product-detail.jsp" >
+                                                            <a href = "product_detail?pid=<%=pro.getId()%>" >
                                                                 <img class="img-fluid image-cover" src="<%=pro.getListImg().get(0).getUrl()%>" alt="img" >
-                                                                <img class="img-fluid image-secondary" src="<%=pro.getListImg().get(1).getUrl()%>" alt="img" >
+
                                                             </a >
                                                             <div class="highlighted-informations" >
                                                                 <div class="variant-links" >
@@ -259,7 +264,7 @@
                                                         <div class="product-description" >
                                                             <div class="product-groups" >
                                                                 <div class="product-title" >
-                                                                    <a href = "product-detail.jsp" ><%=pro.getName()%></a >
+                                                                    <a href = "product_detail?pid=<%=pro.getId()%>" ><%=pro.getName()%></a >
                                                                 </div >
                                                                 <div class="rating" >
                                                                     <div class="star-content" >
@@ -303,6 +308,8 @@
                                                 </div >
                                                 <%}%>
                                             </div>
+
+
                                         </div>
                                         <div id="list" class="related tab-pane fade in ">
                                             <div class="row">
@@ -314,7 +321,7 @@
                                                                 <div class="thumbnail-container border">
                                                                     <a href="product-detail.jsp">
                                                                         <img class="img-fluid image-cover" src="<%=pro.getListImg().get(0).getUrl()%>" alt="img" >
-                                                                        <img class="img-fluid image-secondary" src="<%=pro.getListImg().get(1).getUrl()%>" alt="img" >
+
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -356,9 +363,7 @@
                                                                             </div>
                                                                             <% }%>
                                                                         </div>
-                                                                        <div class="discription">
-                                                                            <%=pro.getInfo().substring(0,20)%>...
-                                                                        </div>
+
                                                                     </div>
                                                                     <div class="product-buttons d-flex">
                                                                         <form action="#" method="post" class="formAddToCart">
@@ -390,7 +395,7 @@
                                                         <div class="thumbnail-container border" >
                                                             <a href = "product-detail.jsp" >
                                                                 <img class="img-fluid image-cover" src="<%=pro.getListImg().get(0).getUrl()%>" alt="img" >
-                                                                <img class="img-fluid image-secondary" src="<%=pro.getListImg().get(1).getUrl()%>" alt="img" >
+
                                                             </a >
                                                             <div class="highlighted-informations" >
                                                                 <div class="variant-links" >
@@ -457,7 +462,7 @@
                                                                 <div class="thumbnail-container border">
                                                                     <a href="product-detail.jsp">
                                                                         <img class="img-fluid image-cover" src="<%=pro.getListImg().get(0).getUrl()%>" alt="img" >
-                                                                        <img class="img-fluid image-secondary" src="<%=pro.getListImg().get(1).getUrl()%>" alt="img" >
+
                                                                     </a>
                                                                 </div>
                                                             </div>

@@ -125,5 +125,9 @@ public class UserService {
     public static void deleteToken(int id, String token)throws Exception {
         UserDAO.deleteToken(id,token);
     }
+
+    public static void main(String[] args) {
+        System.out.println(hashPassword("123"));
+    }
 }
 

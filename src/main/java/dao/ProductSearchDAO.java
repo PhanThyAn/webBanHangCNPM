@@ -108,6 +108,6 @@ public class ProductSearchDAO {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(searchByName("bàn",0,3));
+        System.out.println(searchByName("bàn",0,3).size());
     }
 }
