@@ -110,9 +110,7 @@
             </div>
         </div>
     </div>
-
     <jsp:include page="/common/web/footer.jsp"></jsp:include>
-
     <!-- Vendor JS -->
     <jsp:include page="/common/web/js.jsp"></jsp:include>
 </body>

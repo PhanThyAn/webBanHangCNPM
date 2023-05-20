@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="happyhome:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>happyhome</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="happyhome.war">
+      <element id="artifact" artifact-name="happyhome:war exploded" />
+    </root>
+  </artifact>
+</component>

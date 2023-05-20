@@ -48,7 +48,7 @@
                 <div class="col-sm-2 col-md-2 d-flex align-items-center">
                     <div id="logo">
                         <a href="<c:url value="/home"/>">
-                        <img src="<c:url value="/Template/web/img/home/Logo-happyhome-removebg-preview.png"/>" alt="logo" class="img-fluid" style="height: 90px">
+                            <img src="<c:url value="/Template/web/img/home/Logo-happyhome-removebg-preview.png"/>" alt="logo" class="img-fluid" style="height: 90px">
                         </a>
                     </div>
                 </div>
@@ -60,15 +60,15 @@
                             <li>
                                 <a href="<c:url value="/list_product"/>" class="parent">Sản Phẩm<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <div class="dropdown-menu">
-<%--                                    <ul>--%>
-<%--                                        <% List<Product_type> list0 = (List<Product_type>) request.getAttribute("listType");--%>
-<%--                                            for (Product_type pty: list0) {%>--%>
-<%--                                        <li class="item living-room-drop">--%>
-<%--                                            <a href="productCate?cid=<%=pty.getType_id()%>" title="<%=pty.getType_name()%>"> <%=pty.getType_name()%> </i>--%>
-<%--                                            </a>--%>
-<%--                                        </li>--%>
-<%--                                        <%}%>--%>
-<%--                                    </ul>--%>
+                                    <ul>
+                                        <% List<Product_type> list0 = (List<Product_type>) request.getAttribute("listType");
+                                            for (Product_type pty: list0) {%>
+                                        <li class="item living-room-drop">
+                                            <a href="productCate?cid=<%=pty.getType_id()%>" title="<%=pty.getType_name()%>"> <%=pty.getType_name()%> </i>
+                                            </a>
+                                        </li>
+                                        <%}%>
+                                    </ul>
                                 </div>
                             </li>
                             <li>
@@ -112,9 +112,9 @@
                                 <div class="dropdown-menu">
                                     <ul>
                                         <c:forEach items="${listAr}" var="item">
-                                        <li class="item">
-                                            <a href="articleCate?cid=${item.getArticle_category_id()}" title="Blog List (Sidebar Left)"> ${item.getArticle_category_name()}<br></a>
-                                        </li>
+                                            <li class="item">
+                                                <a href="articleCate?cid=${item.getArticle_category_id()}" title="Blog List (Sidebar Left)"> ${item.getArticle_category_name()}<br></a>
+                                            </li>
                                         </c:forEach>
                                     </ul>
                                 </div>
@@ -128,14 +128,10 @@
 
                 <!-- search and acount -->
                 <div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
-                    <!-- Phan Thị An-->
-                    <!--4. Trang web sẽ gửi nội dung tìm kiếm lên hệ thống-->
-                    <form method="get" action="<c:url value="/search"/>">
-                        <!--1. Người dùng truy cập trang web bán hàng và chọn ô tìm kiếm sản phẩm trên thanh header của trang web. -->
+                    <form method="get" action="/search">
+
                         <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                        <!--2. Người dùng nhập từ khóa tìm kiếm vào ô tìm kiếm-->
                         <input type="text" name="search" value="" required placeholder="Tìm kiếm" class="ui-autocomplete-input" autocomplete="off" >
-                       <!--3. Người dùng nhấp vào button Tìm kiếm hoặc nhấn phím Enter trên bàn phím để gửi yêu cầu tìm kiếm đến hệ thống-->
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
@@ -220,7 +216,7 @@
                                                 <a href="product-detail.html">
                                                     <img src="<%=p.getImage(0)%>" alt="Product">
                                                 </a>
-                                            </td>
+                                                t         </td>
                                             <td>
                                                 <div class="product-name">
                                                     <a href="product-detail.html"><%=p.name%></a>
@@ -242,8 +238,13 @@
                                         </tr>
 
                                         <tr>
+                                            <%-- Usecase 5 - Đặt hàng : 1. Click vào giỏ hàng--%>
+
+
                                             <td colspan="3" class="d-flex justify-content-center">
+
                                                 <div class="cart-button">
+                                                    <%-- Usecase 5 - Đặt hàng: 2. Chuyển đến trang giỏ hàng--%>
                                                     <a href="/cart_detail" title="View Cart">Xem giỏ hàng</a>
                                                     <a href="/checkout" title="Checkout">Thanh toán</a>
                                                 </div>
