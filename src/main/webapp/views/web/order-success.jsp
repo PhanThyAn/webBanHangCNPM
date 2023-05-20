@@ -7,10 +7,8 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <!--<![endif]-->
 <html lang="en">
-
 <!-- contact11:09-->
 <head>
-    <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Đặt hàng thành công </title>
@@ -18,22 +16,16 @@
     <meta name="keywords" content="Furniture, Decor, Interior">
     <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
     <meta name="author" content="tivatheme">
-
-
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <jsp:include page="/common/web/css.jsp"></jsp:include>
 </head>
-
 <body id="contact" class="blog">
 <jsp:include page="/common/web/header.jsp"></jsp:include>
-
 <!-- main content -->
 <div class="main-content">
     <div id="wrapper-site">
         <div id="content-wrapper">
-
             <!-- breadcrumb -->
             <nav class="breadcrumb-bg">
                 <div class="container no-index">
@@ -45,6 +37,7 @@
                                 </a>
                             </li>
                             <li>
+                                <%-- Usecase 5 - Đặt hàng: 14. Thông báo đặt hàng thành công --%>
                                 <a href="order-success.jsp">
                                     <span>Đặt hàng thành công </span>
                                 </a>
@@ -61,8 +54,6 @@
                             <p>Chúc mừng bạn. Đơn hàng của bạn đã được đặt hàng thành công Bộ phận chăm sóc khách hàng
                                 sẽ liên lạc trong vòng 2h để xác nhận chi tiết đơn hàng</p>
                         </div>
-
-
                         <div class="text-center">
                             <a href="/cart_detail" title="View Cart"><i class="fa fa-home" aria-hidden="true"></i>     TRỞ LẠI TRANG CHỦ</a>
                         </div>
@@ -72,10 +63,7 @@
         </div>
     </div>
 </div>
-
-
 <jsp:include page="/common/web/footer.jsp"></jsp:include>
-
 <!-- Vendor JS -->
 <jsp:include page="/common/web/js.jsp"></jsp:include>
 </body>

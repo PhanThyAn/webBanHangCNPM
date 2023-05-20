@@ -108,6 +108,26 @@ public class ProductSearchDAO {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(searchByName("bàn",0,3).size());
+        List<ProductSearchModel> list ;
+        ResultSet rs;
+        PreparedStatement pst;
+        String sql;
+        try {
+            list = new ArrayList<>();
+            sql = "select * from product  ";
+            pst = DBConnection.getConnection().prepareStatement(sql);
+
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                list.add(new ProductSearchModel(rs.getInt("product_id"),rs.getString("name"),rs.getInt("price"),
+                        rs.getInt("price_sell"),rs.getString("info"),rs.getInt("status"),findImg(rs.getInt("product_id"))));
+
+            }
+            System.out.println(list);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+
+        }
+        System.out.println( "Lisr" + searchByName("bàn",0,3));
     }
 }

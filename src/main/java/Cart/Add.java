@@ -32,7 +32,7 @@ public class Add extends HttpServlet {
         }
         cart.put(p);
         request.getSession().setAttribute("cart",cart);
-        response.sendRedirect("/cart_detail");
+        response.sendRedirect("/WebCNPM/cart_detail");
     }
 
     @Override

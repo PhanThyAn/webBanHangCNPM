@@ -12,12 +12,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loại sản phẩm </title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -68,7 +68,7 @@
                       <th>Tác vụ</th>
                     </tr>
                     </thead>
-                    <tbody>
+
                     <% for (CategoryProModel cate : list) {%>
                    <tr>
                       <td><%=cate.getId()%></td>
@@ -98,7 +98,7 @@
                   </button>
                 </div>
               </div>
-              <form id="add-cate" action="<c:url value="/data-category"/>" method="get">
+              <form id="add-cate" action="/data-category"/> method="get">
               <div class="card-body" style="display: block">
                 <div class="form-group">
                   <label for="cate">Tên danh mục</label>
@@ -121,10 +121,10 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

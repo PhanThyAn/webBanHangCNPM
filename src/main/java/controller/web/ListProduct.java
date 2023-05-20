@@ -24,43 +24,43 @@ public class ListProduct extends HttpServlet {
         try {
 
 
-        // Goi service de thuc hien getAll
-        ProductService service = new ProductService();
-        //phan trang
-        String indexPage = request.getParameter("index");
-        if (indexPage == null) {
-            indexPage = "1";
-        }
-        int index = Integer.parseInt(indexPage);
+            // Goi service de thuc hien getAll
+            ProductService service = new ProductService();
+            //phan trang
+            String indexPage = request.getParameter("index");
+            if (indexPage == null) {
+                indexPage = "1";
+            }
+            int index = Integer.parseInt(indexPage);
 
 
-        List<Product> list = service.pagingProduct(index);
-        int count = service.getTotalProduct();
-        int endPage = count / 5; //moi trang 3 bai
-        if (count % 5 != 0) {
-            endPage++;
-        }
-        request.setAttribute("endP", endPage);
-        request.setAttribute("tag", index);
-        request.setAttribute("num", count);
-        request.setAttribute("indexPage", indexPage);
+            List<Product> list = service.pagingProduct(index);
+            int count = service.getTotalProduct();
+            int endPage = count / 5; //moi trang 3 bai
+            if (count % 5 != 0) {
+                endPage++;
+            }
+            request.setAttribute("endP", endPage);
+            request.setAttribute("tag", index);
+            request.setAttribute("num", count);
+            request.setAttribute("indexPage", indexPage);
 
-        List<Article_Category> listAr = ArticleService.getListArCategory();
-        request.setAttribute("listAr", listAr);
-        // lay ra list product
-        //   List<Product> list = service.getAllProduct();
-        List<Product_type> listType = service.getAllProduct_type();
-        request.setAttribute("listType", listType);
-        request.setAttribute("list", list);
+            List<Article_Category> listAr = ArticleService.getListArCategory();
+            request.setAttribute("listAr", listAr);
+            // lay ra list product
+            //   List<Product> list = service.getAllProduct();
+            List<Product_type> listType = service.getAllProduct_type();
+            request.setAttribute("listType", listType);
+            request.setAttribute("list", list);
 
-        Product_type name = new Product_type(500, "Tất cả sản phẩm");
-        request.setAttribute("typeName", name);
-        //lay ra dl de chen vao footer
-        IntroService intr = new IntroService();
-        Introduce intro = intr.getIntro();
-        request.setAttribute("info", intro);
+            Product_type name = new Product_type(500, "Tất cả sản phẩm");
+            request.setAttribute("typeName", name);
+            //lay ra dl de chen vao footer
+            IntroService intr = new IntroService();
+            Introduce intro = intr.getIntro();
+            request.setAttribute("info", intro);
 
-        request.getRequestDispatcher("/views/web/table.jsp").forward(request, response);
+            request.getRequestDispatcher("/views/web/table.jsp").forward(request, response);
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thêm user</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
   <style>
     .error{
       float: left !important;
@@ -23,7 +23,7 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -60,7 +60,7 @@
                 </div>
               </div>
               <div class="card-body" style="display: block; padding:0px ;">
-                <form action="<c:url value="/data-user?action=add"/>" method="post" id="add-user">
+                <form action="/data-user?action=add"/> method="post" id="add-user">
                   <div class="card-body">
                     <div style="display: flex" class="row">
                       <div class="form-group col-md-6">
@@ -123,7 +123,7 @@
           </div>
 
           <div class="card-footer row" style="width: 100%;">
-            <button type="submit" class="btn btn-primary" form="add-user" >Thêm </button>
+            <button type="submit" class="btn btn-primary" >Thêm </button>
           </div>
         </div>
         <!-- /.row -->
@@ -134,11 +134,11 @@
     <!-- /.content -->
   </div>
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 
 </div>
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
-<script src="<c:url value="/Template/web/libs/jquery/jquery.validate.js"/>"></script>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
+<script src="<c:url value="/webapp/Template/web/libs/jquery/jquery.validate.js"/>"></script>
 <script>
   $.validator.setDefaults({
     errorElement: "label",
