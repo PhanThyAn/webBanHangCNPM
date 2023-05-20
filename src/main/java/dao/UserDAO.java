@@ -24,6 +24,7 @@ public class UserDAO {
             while (rs.next()) {
                 user = new UserModel(rs.getInt("uid"), rs.getString("user_name"), rs.getString("password"), rs.getInt("role"), rs.getInt("enable"));
             }
+            System.out.println(user.getUserName());
             return user;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -354,6 +355,14 @@ public class UserDAO {
             pst.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            System.out.println(findLogin("luan","12345"));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }
