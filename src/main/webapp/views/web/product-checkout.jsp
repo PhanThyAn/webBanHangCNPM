@@ -126,8 +126,7 @@
                                             <div class="tab-content">
                                                 <div class="tab-pane fade in active show" id="checkout-guest-form"
                                                      role="tabpanel">
-                                                    <%-- Usecase 5 - Đặt hàng: 5. Nhập địa chỉ giao hàng--%>
-                                                    <%-- Usecase 5 - Đặt hàng: 6. thiết lập thông tin thanh toán--%>
+
                                                     <form action="order_success" id="customer-form" class="js-customer-form"
                                                           method="post">
                                                         <div>
@@ -149,6 +148,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <%-- Usecase 5 - Đặt hàng: 5. Nhập địa chỉ giao hàng--%>
+
                                         <div class="checkout-personal-step">
                                             <h3 class="step-title h3 " id="step-title-2">
                                                 <span class="step-number">2</span>Địa chỉ
@@ -181,6 +182,7 @@
                                                 <span class="step-number">3</span>Thanh toán
                                             </h3>
                                         </div>
+                                        <%-- Usecase 5 - Đặt hàng: 6. Chọn phương thức thanh toán--%>
                                         <div class="content step-active" id="step3">
                                             <div class="tab-content">
                                                 <div class="tab-pane fade in active show" role="tabpanel">
@@ -254,7 +256,7 @@
                                                 </div>
                                                 <div class="clearfix">
                                                     <div class="row">
-                                                        <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn đặt hàng--%>
+                                                        <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn hoàn tất đă hàng--%>
                                                         <button type="submit">
                                                             <a href="/order_success"
                                                                class="continue btn btn-primary pull-xs-right" value="3"

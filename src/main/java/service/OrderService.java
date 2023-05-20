@@ -156,7 +156,6 @@ public class OrderService {
 
     public static void main(String[] args)  throws Exception {
         OrderService os = new OrderService();
-
         System.out.println(os.getOderByUname("dung"));
         Date current = Date.valueOf(LocalDate.now());
 //        Order od = new Order(7,"dung","Tien mat",20000,10,current,"xe",0);

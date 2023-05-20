@@ -41,11 +41,10 @@ public class OrderSuccess extends HttpServlet {
 
         Cart cart = (Cart) request.getSession().getAttribute("cart");
         Collection<Product> listp = cart.getListProduct();
-
-//            Usecase 5 - Đặt hàng: 9. Kiểm tra thông tin thanh toán
-//            Usecase 5 - Đặt hàng: 10. Kiểm tra đăng nhâp
+//            Usecase 5 - Đặt hàng: 8. Tiến hành kiểm tra thông tin
+//            Usecase 5 - Đặt hàng: 9. Kiểm tra đăng nhâp
         UserModel user = (UserModel) request.getSession().getAttribute("user");
-//            Usecase 5 - Đặt hàng: 10.1 Yêu cầu  đăng nhập
+//            Usecase 5 - Đặt hàng: 9.1 Yêu cầu  đăng nhập
         if (Objects.isNull(user)) {
             response.sendRedirect("/login");
 
@@ -60,9 +59,8 @@ public class OrderSuccess extends HttpServlet {
                 String ptthanhtoan = request.getParameter("thanhtoan");
                 UserModel u = user;
                 long money = cart.getTotal();
-
                 Date current = Date.valueOf(LocalDate.now());
-//                Usecase 5 - Đặt hàng: 11. addOrder()
+//                Usecase 5 - Đặt hàng: 10. addOrder()
                 Order od = new Order(orderid, u.getUserName(), "Tien mat", money, 0, current, " ", 0);
                 oderService.addOder(od);
                 od.setOder_id(orderid);
@@ -75,19 +73,14 @@ public class OrderSuccess extends HttpServlet {
             } catch (Exception e) {
                 response.sendRedirect("/home");
             }
-
         }
-
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/order-success.jsp");
         rd.forward(request, response);
-
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
