@@ -106,208 +106,212 @@
                 <div class="row">
                     <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 onecol">
                         <div id="main">
-                            <div class="cart-grid row">
-                                <div class="col-md-8 check-info">
-                                    <div class="checkout-personal-step ">
-                                        <h3 class="step-title h3 info" id="step-title-1">
-                                            <span class="step-number">1</span>THÔNG TIN CÁ NHÂN
-                                        </h3>
-                                    </div>
-                                    <div class="content step-active" id="step1">
-                                        <ul class="nav nav-inline">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="tab"
-                                                   href="#checkout-guest-form">
-                                                    THÔNG TIN ĐẶT HÀNG
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade in active show" id="checkout-guest-form"
-                                                 role="tabpanel">
-                                                <%-- Usecase 5 - Đặt hàng: 5. Nhập địa chỉ giao hàng--%>
-                                                <%-- Usecase 5 - Đặt hàng: 6. thiết lập thông tin thanh toán--%>
-                                                <form action="#" id="customer-form" class="js-customer-form"
-                                                      method="post">
-                                                    <div>
-                                                        <input type="hidden" name="id_customer" value="">
-                                                        <div class="form-group row">
-                                                            <input class="form-control" name="firstname" type="text"
-                                                                   placeholder="Họ và tên : <%=user.getUserName()%>" disabled="disabled">
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <input class="form-control" name="email" type="email"
-                                                                   placeholder="Email : <%=user.getEmail()%>" disabled="disabled">
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <input class="form-control" name="email" type="email"
-                                                                   placeholder="Điện thoại : <%=user.getPhoneNum()%>" >
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                            <form action="/order_success" method="get">
+                                <div class="cart-grid row">
+                                    <div class="col-md-8 check-info">
+                                        <div class="checkout-personal-step ">
+                                            <h3 class="step-title h3 info" id="step-title-1">
+                                                <span class="step-number">1</span>THÔNG TIN CÁ NHÂN
+                                            </h3>
                                         </div>
-                                    </div>
-                                    <div class="checkout-personal-step">
-                                        <h3 class="step-title h3 " id="step-title-2">
-                                            <span class="step-number">2</span>Địa chỉ
-                                        </h3>
-                                    </div>
-                                    <div class="content step-active" id="step2">
-                                        <ul class="nav nav-inline">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-toggle="tab" href="#">
-                                                    Địa chỉ hoá đơn
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade in active show" role="tabpanel">
-                                                <form action="#" class="js-customer-form" method="post">
-                                                    <div>
-                                                        <div class="form-group row">
-                                                            <input class="form-control" name="adress" type="text"
-                                                                   placeholder="<%=user.getAddress()%>">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <!--   data-link-action="sign-in" type="submit"-->
-                                        </div>
-                                    </div>
-                                    <div class="checkout-personal-step">
-                                        <h3 class="step-title h3" id="step-title-3">
-                                            <span class="step-number">3</span>Thanh toán
-                                        </h3>
-                                    </div>
-                                    <div class="content step-active" id="step3">
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade in active show" role="tabpanel">
-                                                <div class="ty-other-pay clearfix">
-                                                    <select name="thanhtoan" class="ty-payments-list">
-                                                        <option value="Giao hàng thu tiền tại nhà">Giao hàng thu tiền tận nhà</option>
-                                                        <option value="Nhận hàng tại cửa hàng">Nhận hàng tại cửa hàng</option>
-                                                        <option value="Thanh toán qua ngân hàng">Thanh toán qua ngân hàng</option>
-
-
-                                                    </select>
-                                                    <div>CHÍNH SÁCH THANH TOÁN</div>
-                                                    <ul class="ty-payments-list">
-                                                        <li class="ty-payments-list__item">
-                                                            <div class="ty-payments-list__item-group">
-                                                                <label
-                                                                       class="ty-payments-list__item-title">
-                                                                    Giao hàng thu tiền tận nhà
-                                                                </label>
-                                                                <div class="ty-payments-list__description">
-                                                                    Miễn phí các quận nội thành HCM ( Theo quy định của
-                                                                    HappyHome... vui lòng xem chi tiết chính sách vận
-                                                                    chuyển)
-                                                                </div>
-                                                            </div>
-                                                        </li>
+                                        <div class="content step-active" id="step1">
+                                            <ul class="nav nav-inline">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab"
+                                                       href="#checkout-guest-form">
+                                                        THÔNG TIN ĐẶT HÀNG
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active show" id="checkout-guest-form"
+                                                     role="tabpanel">
+                                                    <%-- Usecase 5 - Đặt hàng: 5. Nhập địa chỉ giao hàng--%>
+                                                    <%-- Usecase 5 - Đặt hàng: 6. thiết lập thông tin thanh toán--%>
+                                                    <form action="order_success" id="customer-form" class="js-customer-form"
+                                                          method="post">
                                                         <div>
+                                                            <input type="hidden" name="id_customer" value="">
+                                                            <div class="form-group row">
+                                                                <input class="form-control" name="firstname" type="text"
+                                                                       placeholder="Họ và tên : <%=user.getUserName()%>" disabled="disabled">
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <input class="form-control" name="email" type="email"
+                                                                       placeholder="Email : <%=user.getEmail()%>" disabled="disabled">
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <input class="form-control" name="email" type="email"
+                                                                       placeholder="Điện thoại : <%=user.getPhoneNum()%>" >
+                                                            </div>
                                                         </div>
-                                                        <li class="ty-payments-list__item">
-
-                                                            <div class="ty-payments-list__item-group">
-                                                                <label
-                                                                       class="ty-payments-list__item-title">
-                                                                    Nhận hàng tại cửa hàng
-                                                                </label>
-                                                                <div class="ty-payments-list__description">
-                                                                    Giảm ngay 50.000đ nếu khách hàng nhận hàng tại
-                                                                    HappyHome ( Áp dụng sản phẩm từ : 1 triệu)
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="ty-payments-list__item">
-
-                                                            <div class="ty-payments-list__item-group">
-                                                                <label
-                                                                       class="ty-payments-list__item-title">
-                                                                    Thanh toán qua ngân hàng
-                                                                </label>
-                                                                <div class="ty-payments-list__description">
-                                                                    Khách hàng chuyển khoản thanh toán vô các tài khoản
-                                                                    của HappyHome
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="ty-payments-list__instruction">
-                                                        <p>Giao hàng <strong>từ thứ 2 đến thứ 7 ( Chủ nhật không làm
-                                                            việc)</strong></p>
-                                                        <p>Thời gian giao hàng từ <strong>8h --> 19h</strong></p>
-                                                    </div>
+                                                    </form>
                                                 </div>
-                                                <form action="#" class="js-customer-form" method="post">
-                                                    <div>
-                                                        <div class="form-group row">
+                                            </div>
+                                        </div>
+                                        <div class="checkout-personal-step">
+                                            <h3 class="step-title h3 " id="step-title-2">
+                                                <span class="step-number">2</span>Địa chỉ
+                                            </h3>
+                                        </div>
+                                        <div class="content step-active" id="step2">
+                                            <ul class="nav nav-inline">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#">
+                                                        Địa chỉ hoá đơn
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active show" role="tabpanel">
+                                                    <form action="#" class="js-customer-form" method="post">
+                                                        <div>
+                                                            <div class="form-group row">
+                                                                <input class="form-control" name="adress" type="text"
+                                                                       placeholder="<%=user.getAddress()%>">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!--   data-link-action="sign-in" type="submit"-->
+                                            </div>
+                                        </div>
+                                        <div class="checkout-personal-step">
+                                            <h3 class="step-title h3" id="step-title-3">
+                                                <span class="step-number">3</span>Thanh toán
+                                            </h3>
+                                        </div>
+                                        <div class="content step-active" id="step3">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active show" role="tabpanel">
+                                                    <div class="ty-other-pay clearfix">
+                                                        <select name="thanhtoan" class="ty-payments-list">
+                                                            <option value="Giao hàng thu tiền tại nhà">Giao hàng thu tiền tận nhà</option>
+                                                            <option value="Nhận hàng tại cửa hàng">Nhận hàng tại cửa hàng</option>
+                                                            <option value="Thanh toán qua ngân hàng">Thanh toán qua ngân hàng</option>
+
+
+                                                        </select>
+                                                        <div>CHÍNH SÁCH THANH TOÁN</div>
+                                                        <ul class="ty-payments-list">
+                                                            <li class="ty-payments-list__item">
+                                                                <div class="ty-payments-list__item-group">
+                                                                    <label
+                                                                            class="ty-payments-list__item-title">
+                                                                        Giao hàng thu tiền tận nhà
+                                                                    </label>
+                                                                    <div class="ty-payments-list__description">
+                                                                        Miễn phí các quận nội thành HCM ( Theo quy định của
+                                                                        HappyHome... vui lòng xem chi tiết chính sách vận
+                                                                        chuyển)
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <div>
+                                                            </div>
+                                                            <li class="ty-payments-list__item">
+
+                                                                <div class="ty-payments-list__item-group">
+                                                                    <label
+                                                                            class="ty-payments-list__item-title">
+                                                                        Nhận hàng tại cửa hàng
+                                                                    </label>
+                                                                    <div class="ty-payments-list__description">
+                                                                        Giảm ngay 50.000đ nếu khách hàng nhận hàng tại
+                                                                        HappyHome ( Áp dụng sản phẩm từ : 1 triệu)
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="ty-payments-list__item">
+
+                                                                <div class="ty-payments-list__item-group">
+                                                                    <label
+                                                                            class="ty-payments-list__item-title">
+                                                                        Thanh toán qua ngân hàng
+                                                                    </label>
+                                                                    <div class="ty-payments-list__description">
+                                                                        Khách hàng chuyển khoản thanh toán vô các tài khoản
+                                                                        của HappyHome
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="ty-payments-list__instruction">
+                                                            <p>Giao hàng <strong>từ thứ 2 đến thứ 7 ( Chủ nhật không làm
+                                                                việc)</strong></p>
+                                                            <p>Thời gian giao hàng từ <strong>8h --> 19h</strong></p>
+                                                        </div>
+                                                    </div>
+                                                    <form action="order_success" class="js-customer-form" method="post">
+                                                        <div>
+                                                            <div class="form-group row">
                                                             <textarea class="form-control"
                                                                       placeholder="Để lại lời nhắn cho chúng tôi"
                                                                       rows="3"></textarea>
+                                                            </div>
                                                         </div>
+                                                    </form>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <div class="row">
+                                                        <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn đặt hàng--%>
+                                                        <button type="submit">
+                                                            <a href="/order_success"
+                                                               class="continue btn btn-primary pull-xs-right" value="3"
+                                                               style="margin-top: 15px;margin-bottom: 25px">Hoàn tất đặt
+                                                                hàng</a>
+                                                        </button>
                                                     </div>
-                                                </form>
-                                            </div>
-                                            <div class="clearfix">
-                                                <div class="row">
-                                                    <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn đặt hàng--%>
-                                                    <a href="/order_success"
-                                                       class="continue btn btn-primary pull-xs-right" value="3"
-                                                       style="margin-top: 15px;margin-bottom: 25px">Hoàn tất đặt
-                                                        hàng</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="cart-grid-right col-xs-12 col-lg-4">
-                                    <div class="cart-summary">
-                                        <div class="cart-detailed-totals">
-                                            <div class="cart-summary-products">
-                                                <div class="summary-label">Có ${cart.quantity} sản phẩm trong giỏ hàng của bạn</div>
-                                            </div>
-                                            <div class="cart-summary-line" id="cart-subtotal-products">
+                                    <div class="cart-grid-right col-xs-12 col-lg-4">
+                                        <div class="cart-summary">
+                                            <div class="cart-detailed-totals">
+                                                <div class="cart-summary-products">
+                                                    <div class="summary-label">Có ${cart.quantity} sản phẩm trong giỏ hàng của bạn</div>
+                                                </div>
+                                                <div class="cart-summary-line" id="cart-subtotal-products">
                                                     <span class="label js-subtotal">
                                                         Tổng Sản phẩm:
                                                     </span>
-                                                <span class="value">${cart.total} vnđ</span>
-                                            </div>
-                                            <div class="cart-summary-line" id="cart-subtotal-shipping">
+                                                    <span class="value">${cart.total} vnđ</span>
+                                                </div>
+                                                <div class="cart-summary-line" id="cart-subtotal-shipping">
                                                     <span class="label">
                                                         Tổng phí chuyển hàng:
                                                     </span>
-                                                <span class="value">Miễn phí</span>
-                                                <div>
-                                                    <small class="value"></small>
+                                                    <span class="value">Miễn phí</span>
+                                                    <div>
+                                                        <small class="value"></small>
+                                                    </div>
+                                                </div>
+                                                <div class="cart-summary-line cart-total">
+                                                    <span class="label">Tổng:</span>
+                                                    <span class="value">${cart.total} vnđ (bao gồm thuế.)</span>
                                                 </div>
                                             </div>
-                                            <div class="cart-summary-line cart-total">
-                                                <span class="label">Tổng:</span>
-                                                <span class="value">${cart.total} vnđ (bao gồm thuế.)</span>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="cart-summary" style="margin-top: 30px">
-                                        <div class="cart-detailed-totals">
-                                            <div class="cart-summary-products">
-                                                <div class="summary-label">Sản phẩm trong giỏ hàng của bạn :</div>
-                                            </div>
-                                            <%  Collection<Product> list = cart.getListProduct();
-                                                for (Product p: list) {%>
-                                            <div class="cart-summary-line" id="cart-products">
+                                        <div class="cart-summary" style="margin-top: 30px">
+                                            <div class="cart-detailed-totals">
+                                                <div class="cart-summary-products">
+                                                    <div class="summary-label">Sản phẩm trong giỏ hàng của bạn :</div>
+                                                </div>
+                                                <%  Collection<Product> list = cart.getListProduct();
+                                                    for (Product p: list) {%>
+                                                <div class="cart-summary-line" id="cart-products">
                                                     <span class="label js-subtotal">
                                                       <a href=""><%=p.getName()%></a>
                                                     </span>
-                                                <span class="value"><%=p.getQuantity()%> x <%=p.getPrice_sell()%> vnđ</span>
+                                                    <span class="value"><%=p.getQuantity()%> x <%=p.getPrice_sell()%> vnđ</span>
+                                                </div>
+                                                <%}%>
                                             </div>
-                                            <%}%>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

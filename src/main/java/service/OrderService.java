@@ -3,17 +3,13 @@ package service;
 import dao.DBConnection;
 import model.Order;
 import model.Order_detail;
-import model.Product;
-import model.ProductSearchModel;
 
-import javax.xml.crypto.Data;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class OrderService {
@@ -97,9 +93,11 @@ public class OrderService {
             ps.setString(7, o.getTransport());
             ps.setInt(8, o.getStatus());
             rs = ps.executeUpdate();
+            System.out.println("than chong");
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 //    Usecase 5 - Đặt hàng: 13. createOrderDetail()
@@ -160,5 +158,9 @@ public class OrderService {
         OrderService os = new OrderService();
 
         System.out.println(os.getOderByUname("dung"));
+        Date current = Date.valueOf(LocalDate.now());
+//        Order od = new Order(7,"dung","Tien mat",20000,10,current,"xe",0);
+//        System.out.println(os.addOder(od));
+
     }
 }

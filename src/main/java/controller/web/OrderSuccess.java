@@ -19,11 +19,12 @@ import java.util.Objects;
 
 @WebServlet(name = "OrderSuccess", value = "/order_success")
 public class OrderSuccess extends HttpServlet {
-    OrderService oderService = new OrderService();
-    int orderid = oderService.getMaxMHD();
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        OrderService oderService = new OrderService();
+        int orderid = oderService.getMaxMHD();
         try {
 
         ArticleService service = new ArticleService();
@@ -68,7 +69,7 @@ public class OrderSuccess extends HttpServlet {
                 Collection<Product> productList = cart.getListProduct();
 //                Usecase 5 - Đặt hàng: 12. addOrderDetail()
                 for (Product p : productList) {
-                    Order_detail orderDetail = new Order_detail(0, od, p.getProduct_id(), p.getPrice_sell(), p.getQuantity(), 0, (p.getPrice_sell() * p.getQuantity()));
+                    Order_detail orderDetail = new Order_detail(13, od, p.getProduct_id(), p.getPrice_sell(), p.getQuantity(), 0, (p.getPrice_sell() * p.getQuantity()));
                     oderService.addOrderDetail(orderDetail);
                 }
             } catch (Exception e) {
@@ -76,6 +77,7 @@ public class OrderSuccess extends HttpServlet {
             }
 
         }
+
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/order-success.jsp");
         rd.forward(request, response);
 
