@@ -6,10 +6,7 @@
 <jsp:useBean id="cart" class="beans.Cart" scope="session"/>
 <% UserModel user = (UserModel)session.getAttribute("user"); %>
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
+
 <html lang="en">
 
 
@@ -43,7 +40,7 @@
                 <div class="breadcrumb">
                     <ol>
                         <li>
-                            <a href="/home">
+                            <a href="/WebCNPM/home">
                                 <span>Trang chủ</span>
                             </a>
                         </li>
@@ -72,14 +69,14 @@
                                                 <div class="product-line-grid row justify-content-between">
                                                     <div class="product-line-grid-left col-md-2">
                                                             <span class="product-image media-middle">
-                                                                <a href="/product_detail?id=<%=p.getProduct_id()%>">
+                                                                <a href="/WebCNPM/product_detail?id=<%=p.getProduct_id()%>">
                                                                     <img class="img-fluid" src="<%=p.getImage(0)%>" alt="">
                                                                 </a>
                                                             </span>
                                                     </div>
                                                     <div class="product-line-grid-body col-md-6">
                                                         <div class="product-line-info">
-                                                            <a class="label" href="/product_detail?id=<%=p.getProduct_id()%>" data-id_customization="0"><%=p.getName()%></a>
+                                                            <a class="label" href="/WebCNPM/product_detail?id=<%=p.getProduct_id()%>" data-id_customization="0"><%=p.getName()%></a>
                                                         </div>
                                                         <div class="product-line-info product-price">
                                                             <span class="value"><%=p.getPrice_sell()%> vnđ</span>
@@ -95,10 +92,10 @@
 
                                                                     <span class="input-group-btn-vertical">
                                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
-                                                                               <a class="add-cart" href="/cart/add?id=<%=p.product_id%>">+</a>
+                                                                               <a class="add-cart" href="/WebCNPM/cart/add?id=<%=p.product_id%>">+</a>
                                                                             </button>
                                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
-                                                                                <a class="add-cart" href="/cart/sub?id=<%=p.product_id%>">-</a>
+                                                                                <a class="add-cart" href="/WebCNPM/cart/sub?id=<%=p.product_id%>">-</a>
                                                                             </button>
                                                                         </span>
                                                                 </div>
@@ -112,7 +109,7 @@
                                                             </div>
                                                             <div class="col-md-2 col text-xs-right align-self-end">
                                                                 <div class="cart-line-product-actions ">
-                                                                    <a class="remove-from-cart" rel="nofollow" href="/cart/del?id=<%=p.getProduct_id()%>" data-link-action="delete-from-cart" data-id-product="1">
+                                                                    <a class="remove-from-cart" rel="nofollow" href="/WebCNPM/cart/del?id=<%=p.getProduct_id()%>" data-link-action="delete-from-cart" data-id-product="1">
                                                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                                     </a>
                                                                 </div>
@@ -125,10 +122,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <%-- Usecase 5 - Đặt hàng: 3. Click Đặt hàng--%>
-                                <%-- Usecase 5 - Đặt hàng: 4. Chuyển đến trang đặt hàng--%>
-                                <a href="/checkout" class="continue btn btn-primary pull-xs-right">
-                                    Đặt hàng
+                                <a href="/WebCNPM/checkout" class="continue btn btn-primary pull-xs-right">
+                                    Tiếp tục
                                 </a>
                             </div>
                             <div class="cart-grid-right col-xs-12 col-lg-3">
