@@ -13,14 +13,14 @@
     <title>Chi tiết sản phẩm <%=pr.getName()%>
     </title>
 
-    <jsp:include page="/common/admin/css.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
     <!-- Navbar -->
-    <jsp:include page="/common/admin/header.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
@@ -63,11 +63,11 @@
                                         <div style="display: flex" class="row">
                                             <div class="form-group col-md-6 ">
                                                 <label for="exampleInputEmail1">Id </label>
-                                                <input type="text" class="form-control" id="" placeholder="<%=pr.getProduct_id()%>" disabled="disabled">
+                                                <input type="text" class="form-control"  placeholder="<%=pr.getProduct_id()%>" disabled="disabled">
                                             </div>
                                             <div class="form-group col-md-6 ">
                                                 <label for="exampleInputEmail1">Mã sản phẩm</label>
-                                                <input type="text" class="form-control" id="" placeholder="<%=pr.getCode()%>" disabled="disabled">
+                                                <input type="text" class="form-control"  placeholder="<%=pr.getCode()%>" disabled="disabled">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -77,28 +77,28 @@
                                         <div style="display: flex" class="row">
                                             <div class="form-group col-md-6 ">
                                                 <label for="exampleInputEmail1">Giá gốc </label>
-                                                <input type="text" class="form-control" id="" placeholder="<%=pr.getPrice()%>" disabled="disabled">
+                                                <input type="text" class="form-control"  placeholder="<%=pr.getPrice()%>" disabled="disabled">
                                             </div>
                                             <div class="form-group col-md-6 ">
                                                 <label for="exampleInputEmail1">Giá khuyến mãi</label>
-                                                <input type="text" class="form-control" id="" placeholder="<%=pr.getPrice_sell()%>" disabled="disabled">
+                                                <input type="text" class="form-control"  placeholder="<%=pr.getPrice_sell()%>" disabled="disabled">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Giới thiệu sản phẩm</label>
-                                            <textarea rows="5" class="form-control" id="" placeholder="<%=pr.getInfo()%>" disabled="disabled"></textarea>
+                                            <textarea rows="5" class="form-control" placeholder="<%=pr.getInfo()%>" disabled="disabled"></textarea>
                                             <label for="exampleInputEmail1">Thông tin sản phẩm</label>
-                                            <input type="email" class="form-control" id="" placeholder="Loại của sản phẩm: <%=pr.getNType()%>" disabled="disabled">
+                                            <input type="email" class="form-control"  placeholder="Loại của sản phẩm: <%=pr.getNType()%>" disabled="disabled">
                                             <label for="exampleInputEmail1"></label>
-                                            <input type="email" class="form-control" id="" placeholder="Hãng sản xuất: <%=pr.getBrand()%>" disabled="disabled">
+                                            <input type="email" class="form-control" placeholder="Hãng sản xuất: <%=pr.getBrand()%>" disabled="disabled">
                                             <label for="exampleInputEmail1"></label>
-                                            <input type="email" class="form-control" id="" placeholder="Màu sắc sản phẩm: <%=pr.getColor()%>" disabled="disabled">
+                                            <input type="email" class="form-control"  placeholder="Màu sắc sản phẩm: <%=pr.getColor()%>" disabled="disabled">
                                             <label for="exampleInputEmail1"></label>
-                                            <input type="email" class="form-control" id="" placeholder="Kích thước sản phẩm: <%=pr.getSize()%>" disabled="disabled">
+                                            <input type="email" class="form-control" placeholder="Kích thước sản phẩm: <%=pr.getSize()%>" disabled="disabled">
                                             <label for="exampleInputEmail1"></label>
-                                            <input type="email" class="form-control" id="" placeholder="Thời gian bảo hành: <%=pr.getProduct_insurance()%>" disabled="disabled">
+                                            <input type="email" class="form-control"  placeholder="Thời gian bảo hành: <%=pr.getProduct_insurance()%>" disabled="disabled">
                                             <label for="exampleInputEmail1"></label>
-                                            <input type="email" class="form-control" id="" placeholder="Trạng thái sản phẩm: <%=pr.getStatus()%>" disabled="disabled">
+                                            <input type="email" class="form-control"  placeholder="Trạng thái sản phẩm: <%=pr.getStatus()%>" disabled="disabled">
 
                                         </div>
 
@@ -144,15 +144,15 @@
                     </div>
                     <!-- /.row -->
                 </div><!-- /.container-fluid -->
-        </section>
+
 
 
         <!-- /.content -->
     </div>
 
-    <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 
 </div>
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

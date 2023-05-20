@@ -17,12 +17,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chi tiết đơn hàng</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -123,10 +123,10 @@
                 <!-- accepted payments column -->
                 <div class="col-6">
                   <p class="lead">Phương thức thanh toán:</p>
-                  <img src="<c:url value="/Template/admin/dist/img/credit/visa.png"/>" alt="Visa">
-                  <img src=" <c:url value="/Template/admin/dist/img/credit/mastercard.png"/>" alt="Mastercard">
-                  <img src=" <c:url value="/Template/admin/dist/img/credit/american-express.png"/>" alt="American Express">
-                  <img src=" <c:url value="/Template/admin/dist/img/credit/paypal2.png"/>" alt="Paypal">
+                  <img src="<c:url value="/webapp/Template/admin/dist/img/credit/visa.png"/>" alt="Visa">
+                  <img src=" <c:url value="/webapp/Template/admin/dist/img/credit/mastercard.png"/>" alt="Mastercard">
+                  <img src=" <c:url value="/webapp/Template/admin/dist/img/credit/american-express.png"/>" alt="American Express">
+                  <img src=" <c:url value="/webapp/Template/admin/dist/img/credit/paypal2.png"/>" alt="Paypal">
 
                   <div style="background-color: #0000000d;padding: 5px 10px;margin-top: 10px">
                     <div style="margin-top: 15px;color: red"><strong>Ghi Chú của khách hàng:</strong></div>
@@ -182,10 +182,10 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

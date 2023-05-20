@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Đăng kí</title>
 
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
@@ -89,6 +89,6 @@
 </div>
 <!-- /.register-box -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trang chủ</title>
-    <jsp:include page="/common/admin/css.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
     <style>
         .active{
             background-color: rgba(255,255,255,.1)!important;
@@ -18,7 +18,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
-    <jsp:include page="/common/admin/header.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
@@ -109,7 +109,7 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <img src="<c:url value="/Template/admin/dist/img/default-150x150.png"/>" alt="Product 1" class="img-circle img-size-32 mr-2">
+                                            <img src="<c:url value="/webapp/Template/admin/dist/img/default-150x150.png"/>" alt="Product 1" class="img-circle img-size-32 mr-2">
                                             SP01
                                         </td>
                                         <td>2.000.000.0đ</td>
@@ -294,12 +294,12 @@
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
-    <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>
 

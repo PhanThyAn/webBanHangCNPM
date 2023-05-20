@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Đăng bài viết giới thiệu sản phẩm</title>
 
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="card-body" style="display: block">
-              <img src="<c:url value="/Template/admin/dist/img/1.jpg"/>" alt="" style="width: 100%;height:344px;border: 1px solid rgba(0,0,0,.125);">
+              <img src="<c:url value="/webapp/Template/admin/dist/img/1.jpg"/>" alt="" style="width: 100%;height:344px;border: 1px solid rgba(0,0,0,.125);">
               <br>
               <div class="form-group" style="margin-top: 10px">
                 <label for="exampleInputFile">Hình ảnh tải lên</label>
@@ -155,8 +155,8 @@
     <!-- /.content -->
   </div>
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
-  <jsp:include page="/common/admin/js.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

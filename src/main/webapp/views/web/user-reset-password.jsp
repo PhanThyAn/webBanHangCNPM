@@ -21,7 +21,7 @@
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <jsp:include page="/common/web/css.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/web/css.jsp"></jsp:include>
     <style>
         .error{
             float: left !important;
@@ -66,7 +66,7 @@
                 <div id="content-wrapper" class="onecol">
                     <div id="main">
                         <div class="page-content">
-                            <form action="<c:url value="/reset-password"/>" class="forgotten-password" method="post" id="customer-form">
+                            <form action="reset-password" class="forgotten-password" method="post" id="customer-form">
                                 <h1 class="text-center title-page">Đặt lại mật khẩu</h1>
                                 <div class="form-fields text-center ">
                                     <div class="form-group center-email-fields" style="display: flex;flex-direction: column;">
@@ -90,9 +90,9 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <a href="<c:url value="/login"></c:url>" class="account-link">
+                                    <a href="login" class="account-link">
                                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                                        <span class="text-center"><a href="<c:url value="/login"/>">Trở lại đăng nhập</a></span>
+                                        <span class="text-center"><a href="login">Trở lại đăng nhập</a></span>
                                     </a>
                                 </div>
                             </form>
@@ -104,10 +104,10 @@
     </div>
 </div>
 
-<jsp:include page="/common/web/footer.jsp"></jsp:include>
+<jsp:include page="/webapp/common/web/footer.jsp"></jsp:include>
 <!-- Vendor JS -->
-<jsp:include page="/common/web/js.jsp"></jsp:include>
-<script src="<c:url value="/Template/web/libs/jquery/jquery.validate.js"/>"></script>
+<jsp:include page="/webapp/common/web/js.jsp"></jsp:include>
+<script src="<c:url value="/webapp/Template/web/libs/jquery/jquery.validate.js"/>"></script>
 <script>
     $.validator.setDefaults({
         errorElement: "label",

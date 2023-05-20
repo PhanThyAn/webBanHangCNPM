@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Danh sách sản phẩm</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -51,7 +51,7 @@
                   </select>
 
                 </div>
-                <button class="btn btn-primary" style="float: right;"><a href="<c:url value="/add_product"/>" style="color: white">Thêm mới</a></button>
+                <button class="btn btn-primary" style="float: right;"><a href="/add_product" style="color: white">Thêm mới</a></button>
               </div>
 
               <!-- /.card-header -->
@@ -103,10 +103,10 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 
 </body>
 </html>

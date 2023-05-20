@@ -7,14 +7,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thêm đơn hàng</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -61,7 +61,7 @@
                         </div>
                       </div>
                       <div class="form-group col-md-6 ">
-                        <label for="exampleInputEmail1">Tên</label>
+                        <label >Tên</label>
                         <input type="text" class="form-control" id="" placeholder="">
                       </div>
                     </div>
@@ -87,7 +87,7 @@
 
                     <div style="display: flex" class="row">
                       <div class="form-group col-md-12 ">
-                        <label for="exampleInputEmail1">Địa chỉ giao hàng</label>
+                        <label >Địa chỉ giao hàng</label>
                         <input type="text" class="form-control " placeholder="">
                       </div>
                     </div>
@@ -95,7 +95,7 @@
 
                     <div style="display: flex" class="row">
                       <div class="form-group col-md-12 ">
-                        <label for="exampleInputEmail1">Ghi chú của khách hàng</label>
+                        <label >Ghi chú của khách hàng</label>
                         <textarea class="form-control"> </textarea>
                       </div>
                     </div>
@@ -105,7 +105,7 @@
                       <div class="form-group col-md-6 ">
                         <div class="form-group">
                           <label>Ngày đặt hàng:</label>
-                          <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                          <div class="input-group date" data-target-input="nearest">
                             <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" placeholder="13/11/2022">
                             <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
@@ -136,7 +136,7 @@
                   <div class="form-group col-md-6 ">
                     <div class="form-group">
                       <label>Sản phẩm</label>
-                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                      <div class="input-group date"  data-target-input="nearest">
                         <input type="text" class="form-control " data-target="#reservationdate" placeholder="">
                       </div>
                     </div>
@@ -144,7 +144,7 @@
                   <div class="form-group col-md-6 ">
                     <div class="form-group">
                       <label>Số lượng</label>
-                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                      <div class="input-group date" id="/reservationdate" data-target-input="nearest">
                         <input type="number" class="form-control " data-target="#reservationdate" placeholder="">
                       </div>
                     </div>
@@ -154,7 +154,7 @@
                   <div class="form-group col-md-6 ">
                     <div class="form-group">
                       <label>Đơn giá</label>
-                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                      <div class="input-group date" data-target-input="nearest">
                         <input type="text" class="form-control " data-target="#reservationdate" placeholder="">
                       </div>
                     </div>
@@ -187,9 +187,9 @@
     <!-- /.content -->
   </div>
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 
 </div>
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

@@ -64,7 +64,7 @@
         <div id="content-wrapper" class="onecol">
           <div id="main">
             <div class="page-content">
-              <form action="<c:url value="/change-password"/>" class="forgotten-password" method="post" id="customer-form">
+              <form action="change-password" class="forgotten-password" method="post" id="customer-form">
                 <h1 class="text-center title-page">Đặt lại mật khẩu</h1>
                 <div class="form-fields text-center ">
                   <div class="form-group center-email-fields">

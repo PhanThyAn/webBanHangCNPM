@@ -60,15 +60,15 @@
                             <li>
                                 <a href="<c:url value="/list_product"/>" class="parent">Sản Phẩm<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                                 <div class="dropdown-menu">
-                                    <ul>
-                                        <% List<Product_type> list0 = (List<Product_type>) request.getAttribute("listType");
-                                            for (Product_type pty: list0) {%>
-                                        <li class="item living-room-drop">
-                                            <a href="productCate?cid=<%=pty.getType_id()%>" title="<%=pty.getType_name()%>"> <%=pty.getType_name()%> </i>
-                                            </a>
-                                        </li>
-                                        <%}%>
-                                    </ul>
+<%--                                    <ul>--%>
+<%--                                        <% List<Product_type> list0 = (List<Product_type>) request.getAttribute("listType");--%>
+<%--                                            for (Product_type pty: list0) {%>--%>
+<%--                                        <li class="item living-room-drop">--%>
+<%--                                            <a href="productCate?cid=<%=pty.getType_id()%>" title="<%=pty.getType_name()%>"> <%=pty.getType_name()%> </i>--%>
+<%--                                            </a>--%>
+<%--                                        </li>--%>
+<%--                                        <%}%>--%>
+<%--                                    </ul>--%>
                                 </div>
                             </li>
                             <li>
@@ -130,7 +130,7 @@
                 <div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
                     <!-- Phan Thị An-->
                     <!--4. Trang web sẽ gửi nội dung tìm kiếm lên hệ thống-->
-                    <form method="get" action="/search">
+                    <form method="get" action="<c:url value="/search"/>">
                         <!--1. Người dùng truy cập trang web bán hàng và chọn ô tìm kiếm sản phẩm trên thanh header của trang web. -->
                         <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                         <!--2. Người dùng nhập từ khóa tìm kiếm vào ô tìm kiếm-->

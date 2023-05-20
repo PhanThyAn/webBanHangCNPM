@@ -8,12 +8,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sửa danh mục</title>
-    <jsp:include page="/common/admin/css.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
-    <jsp:include page="/common/admin/header.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
@@ -53,14 +53,14 @@
                                 <c:if test="${success != null}">
                                     <div class="alert-success" style="width: 30%">${success}</div>
                                 </c:if>
-                                <form style="padding:10px" action="<c:url value="/data-category"/>" method="get" id="edit-cate">
+                                <form style="padding:10px" action="/data-category"/> method="get" id="edit-cate">
                                     <div class="form-group">
                                         <label for="cate">Tên Danh mục</label>
                                         <input type="text" class="form-control" name="cate" id="cate" placeholder="Tên danh mục" value="${cate.getName()}">
                                         <input type="hidden" name="id" value="${cate.getId()}">
                                         <input type="hidden" name="action" value="edit">
                                     </div>
-                                    <button type="submit" class="btn btn-primary" form="edit-cate">Lưu thông tin </button>
+                                    <button type="submit" class="btn btn-primary" >Lưu thông tin </button>
                                 </form>
                             </div>
                             <!-- /.card-body -->
@@ -74,10 +74,10 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

@@ -82,7 +82,7 @@
             <div class="container">
                 <div id="main">
                     <h1 class="title-page">Thông tin tài khoản</h1>
-                    <form action="<c:url value="/account"/>" id="edit-acc" method="post" novalidate="novalidate">
+                    <form action="/account" id="edit-acc" method="post" novalidate="novalidate">
                         <div class="content" id="block-history">
                             <table class="std table">
                                 <tbody>
