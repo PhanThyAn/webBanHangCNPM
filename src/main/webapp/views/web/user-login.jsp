@@ -64,7 +64,7 @@
             <div id="main">
                 <div class="container">
                     <div class="login-form">
-                        <form id="customer-form" action="<c:url value="/login"/>" method="post">
+                        <form id="customer-form" action="login" method="post">
                             <h1 class="text-center title-page">Đăng Nhập</h1>
                             <% if(error != null){%>
                             <div style="color:#dc3545;"><%=error%></div>
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="no-gutters text-center">
                                     <div class="forgot-password">
-                                        <a href="<c:url value="/reset-password"></c:url>">
+                                        <a href="reset-password">
                                             Quên mật khẩu?
                                         </a>
                                     </div>

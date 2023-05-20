@@ -11,14 +11,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thêm sản phẩm mới</title>
 
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -42,7 +42,7 @@
 
     <!-- Main content -->
     <section class="content">
-      <form action="<c:url value="/add_product"/>" method="post" name="editform" id="editform">
+      <form action="/add_product" method="post" name="editform" id="editform">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
@@ -74,7 +74,7 @@
 
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Tên sản phẩm<span class="text-danger">(*)</span></label>
+                        <label >Tên sản phẩm<span class="text-danger">(*)</span></label>
                         <input type="text" class="form-control" id="ten" name="ten" >
                       </div>
                       <div style="display: flex" class="row">
@@ -91,11 +91,11 @@
 
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Thông tin sản phẩm</label>
+                        <label >Thông tin sản phẩm</label>
                       </div>
                       <div class="form-group">
 
-                        <label for="exampleInputEmail1">Loại sản phẩm</label>
+                        <label >Loại sản phẩm</label>
                         <select name="famille">
                           <% List<Product_type> list0 = (List<Product_type>) request.getAttribute("listType");
                             for (Product_type pty: list0
@@ -107,27 +107,27 @@
                         </select>
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Hãng sản xuất</label>
+                        <label >Hãng sản xuất</label>
                         <input type="text" class="form-control" id="hangsx" name="hangsx">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Màu sắc sản phẩm</label>
+                        <label >Màu sắc sản phẩm</label>
                         <input type="text" class="form-control" id="mausac" name="mausac">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Kích thước</label>
+                        <label>Kích thước</label>
                         <input type="text" class="form-control" id="kichthuoc" name="kichthuoc">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Thời gian bảo hành</label>
+                        <label >Thời gian bảo hành</label>
                         <input type="text" class="form-control" id="baohanh" name="baohanh">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Thuộc tính sản phẩm</label>
+                        <label >Thuộc tính sản phẩm</label>
                         <input type="text" class="form-control" id="thuoctinh" name="thuoctinh">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Trạng thái sản phẩm</label>
+                        <label >Trạng thái sản phẩm</label>
                         <input type="text" class="form-control" id="trangthai" name="trangthai">
                       </div>
                     </div>
@@ -165,11 +165,11 @@
                 <div class="card-body" style="display: block">
                   <br>
                   <div class="form-group" style="">
-                    <label for="exampleInputFile">Tải ảnh lên</label>
+                    <label >Tải ảnh lên</label>
                     <div class="input-group">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="">
-                        <label class="custom-file-label" for="exampleInputFile">Chọn file</label>
+                        <label class="custom-file-label" >Chọn file</label>
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text">Tải lên</span>
@@ -199,9 +199,9 @@
     <!-- /.content -->
   </div>
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 
 </div>
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

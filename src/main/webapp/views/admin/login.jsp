@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Đăng nhập</title>
 
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -25,7 +25,7 @@
       <% if(error != null) {%>
       <div class="alert-danger"><%=error%></div>
       <% } %>
-      <form action="<c:url value="/admin-login"/>" method="post">
+      <form action="/admin-login" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" id="username" placeholder="username">
           <label id="username-error" class="error" for="username" style="display: inline;"></label>
@@ -56,7 +56,7 @@
 </div>
 <!-- /.login-box -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 <script>
   $.validator.setDefaults({
     errorElement: "label",

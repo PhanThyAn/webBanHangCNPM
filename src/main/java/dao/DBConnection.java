@@ -14,8 +14,11 @@ public class DBConnection {
     /*DO NOT EDIT THE BELOW METHOD, YOU MUST USE ONLY THIS ONE FOR YOUR DATABASE CONNECTION*/
     public static Connection getConnection()throws Exception {
         try {
+            String serverName  ="34.23.13.26";
+            String dbName = "web";
+            String portNumber = "3306";
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/webcnpm";
+            String url = "jdbc:mysql://"+serverName+":"+portNumber+"/"+dbName;
             String user = "root";
             String pass = "123456789";
             return  DriverManager.getConnection(url,user,pass);

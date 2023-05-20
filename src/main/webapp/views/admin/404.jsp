@@ -7,12 +7,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trang không tồn tại</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -44,7 +44,7 @@
 
           <p>
            Trang bạn đang truy cập hiện thời không tồn tại
-            bạn có thể <a href="<c:url value="/views/admin/home.jsp"/>">trở về trang chủ quản lí</a> hoặc tìm kiếm trang bên dưới
+            bạn có thể <a href="<c:url value="/webapp/views/admin/home.jsp"/>">trở về trang chủ quản lí</a> hoặc tìm kiếm trang bên dưới
           </p>
 
           <form class="search-form">
@@ -67,10 +67,10 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

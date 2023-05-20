@@ -7,12 +7,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sửa bài viết</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -56,7 +56,7 @@
                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Bắt trẻ đồng xanh">
                     </div>
                     <div class="form-group">
-                      <label for="short-content">Nội dung tóm tắt</label>
+                      <label >Nội dung tóm tắt</label>
                       <textarea rows="5" class="form-control" placeholder="Nhân vật Holden Caulfield đang phải đối mặt với sự thay đổi quá
                       nhanh cả về tâm sinh lý của tuổi vị thành niên lẫn sự xa lạ của xã hội người lớn.
                        Một môi trường không còn “vô trùng” chỉ xoay quanh việc học hành.
@@ -109,7 +109,7 @@
                 </div>
               </div>
               <div class="card-body" style="display: block">
-                <img src="<c:url value="/Template/admin/dist/img/1.jpg"/>" alt="" style="width: 100%;height:344px;border: 1px solid rgba(0,0,0,.125);">
+                <img src="<c:url value="/webapp/Template/admin/dist/img/1.jpg"/>" alt="" style="width: 100%;height:344px;border: 1px solid rgba(0,0,0,.125);">
                 <br>
                 <div class="form-group" style="margin-top: 10px">
                   <label for="exampleInputFile">File input</label>
@@ -161,10 +161,10 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 </body>
 </html>

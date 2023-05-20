@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sửa user</title>
-    <jsp:include page="/common/admin/css.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
     <style>
         .button-switch {
             margin-top: 28px;
@@ -103,7 +103,7 @@
 <div class="wrapper">
 
     <!-- Navbar -->
-    <jsp:include page="/common/admin/header.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
     <!-- /.navbar -->
 
     <!-- Content Wrapper. Contains page content -->
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
                             <div class="card-body" style="display: block; padding:0px ;">
-                                <form action="<c:url value="/data-user?action=edit&id=<%=user.getId()%>"/>" method="post" id="edit-user">
+                                <form action="/data-user?action=edit&id=<%=user.getId()%>" method="post" id="edit-user">
                                     <div class="card-body">
                                         <c:if test="${success != null}">
                                             <div class="alert-success" style="width: 36%;">${success}</div>
@@ -211,10 +211,10 @@
         <!-- /.content -->
     </div>
 
-    <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+    <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 
 </div>
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 <script type="text/javascript">
     var enable = "<%=user.getEnable()%>"
     var role = "<%=user.getRole()%>"

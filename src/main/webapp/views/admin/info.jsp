@@ -9,12 +9,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thông tin web</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -59,11 +59,11 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Địa chỉ</label>
-                      <input type="text" class="form-control" id="exampl" value="<%=in.address%>">
+                      <input type="text" class="form-control"  value="<%=in.address%>">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Địa chỉ showroom</label>
-                      <input type="text" class="form-control" id="exampl" value="<%=in.showroom%>">
+                      <input type="text" class="form-control"  value="<%=in.showroom%>">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Thời gian làm việc</label>
@@ -105,13 +105,13 @@
                 </div>
               </div>
               <div class="card-body" style="display: block">
-                <img src="<c:url value="/Template/web/img/home/Logo-happyhome.PNG"/>" alt="" style="width: 100%;height:155px;border: 1px solid rgba(0,0,0,.125);">
+                <img src="<c:url value="/webapp/Template/web/img/home/Logo-happyhome.PNG"/>" alt="" style="width: 100%;height:155px;border: 1px solid rgba(0,0,0,.125);">
                 <br>
                 <div class="form-group" style="margin-top: 10px">
                   <label for="exampleInputFile">Duyệt ảnh</label>
                   <div class="input-group">
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="exampleInputFile">
+                      <input type="file" class="custom-file-input" >
                       <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
                     </div>
                     <div class="input-group-append">
@@ -133,7 +133,7 @@
                 </div>
               </div>
               <div class="card-body" style="display: block">
-                <img src="<c:url value="/Template/web/img/home/Logo-happyhome-removebg-preview.png"/>" alt="" style="width: 100%;height:155px;border: 1px solid rgba(0,0,0,.125);">
+                <img src="<c:url value="/webapp/Template/web/img/home/Logo-happyhome-removebg-preview.png"/>" alt="" style="width: 100%;height:155px;border: 1px solid rgba(0,0,0,.125);">
                 <br>
                 <div class="form-group" style="margin-top: 10px">
                   <label for="exampleInputFile">Duyệt ảnh</label>
@@ -174,35 +174,35 @@
                 <form action="info_controller" method="post" name="editform" id="editform">
                 <div class="modal-body">
                   <div class="form-group">
-                    <label for="input">Tên website</label>
+                    <label >Tên website</label>
                     <input type="text" class="form-control" id="name" name="pname" value="<%=in.name%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Địa chỉ</label>
+                    <label >Địa chỉ</label>
                     <input type="text" class="form-control" id="add" name="paddress" value="<%=in.address%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Địa chỉ showroom</label>
+                    <label >Địa chỉ showroom</label>
                     <input type="text" class="form-control" id="addsr" name="pshowroom" value="<%=in.showroom%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Thời gian làm việc</label>
+                    <label >Thời gian làm việc</label>
                     <input type="text" class="form-control" id="tiw" name="ptimework" value="<%=in.timework%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Email</label>
+                    <label >Email</label>
                     <input type="text" class="form-control" id="eml" name="pemail" value="<%=in.email%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Số điện thoại</label>
+                    <label >Số điện thoại</label>
                     <input type="text" class="form-control" id="ph" name="pphone" value="<%=in.phone%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Miêu tả website</label>
+                    <label >Miêu tả website</label>
                     <input type="text" class="form-control" id="intro" name="pintroduce" value="<%=in.introduce%>">
                   </div>
                   <div class="form-group">
-                    <label for="input">Lời nhắn</label>
+                    <label >Lời nhắn</label>
                     <input type="text" class="form-control" id="cap" name="pcaption" value="<%=in.caption%>">
                   </div>
 
@@ -225,10 +225,10 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 
 <script>
   $('#btnEdit').click(function () {

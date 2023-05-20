@@ -83,7 +83,7 @@
                         <div id="content" class="page-content">
                             <div class="register-form text-center">
                                 <h1 class="text-center title-page">Tạo Tài Khoản</h1>
-                                <form action="<c:url value="/register"/>" id="customer-form" class="js-customer-form" method="post">
+                                <form action="register" id="customer-form" class="js-customer-form" method="post">
                                     <div style="display: flex;flex-direction: column;">
                                         <div class="form-group">
                                             <div>

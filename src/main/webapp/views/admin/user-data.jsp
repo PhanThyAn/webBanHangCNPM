@@ -6,19 +6,19 @@
 <%
   List<UserModel> users = (List<UserModel>) request.getAttribute("users");
 %>
-<c:url var="UrlAction" value="/data-user?action=delete"/>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Danh sách user</title>
-  <jsp:include page="/common/admin/css.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/css.jsp"></jsp:include>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <jsp:include page="/common/admin/header.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/header.jsp"></jsp:include>
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
@@ -57,7 +57,7 @@
                     <option>Washington</option>
                   </select>
                 </div>
-                <button class="btn btn-primary" style="float: right;"><a href="<c:url value="/data-user?action=add"></c:url>" style="color: white">Thêm mới</a></button>
+                <button class="btn btn-primary" style="float: right;"><a href="/data-user?action=add" style="color: white">Thêm mới</a></button>
               </div>
 
               <!-- /.card-header -->
@@ -124,11 +124,11 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <jsp:include page="/common/admin/footer.jsp"></jsp:include>
+  <jsp:include page="/webapp/common/admin/footer.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
 
-<jsp:include page="/common/admin/js.jsp"></jsp:include>
+<jsp:include page="/webapp/common/admin/js.jsp"></jsp:include>
 <script>
   /* $('#delete').click(function (e) {
      e.preventDefault();

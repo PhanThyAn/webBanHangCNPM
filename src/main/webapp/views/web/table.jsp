@@ -239,7 +239,7 @@
                                                                     <div class="product-buttons d-flex">
                                                                         <form action="#" method="post" class="formAddToCart">
                                                                             <a class="add-to-cart" href="<c:url value="/cart/add?id=<%=p.product_id%>"></c:url>" data-button-action="add-to-cart">
-                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>Thêm vào giỏ hàng
+                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>Thêm vào giỏ hàng
                                                                             </a>
                                                                         </form>
                                                                         <a class="addToWishlist" href="#" data-rel="1" onclick="">
@@ -271,11 +271,11 @@
                                                 <div class="page-list col col-xs-12">
                                                     <ul>
                                                         <c:forEach var = "i" begin = "1" end = "${endP}">
-                                                        <li class="${tag == i?"current active" :""}">
-                                                            <a rel="nofollow" href="list_product?index=${i}" class="disabled js-search-link">
-                                                                    ${i}
-                                                            </a>
-                                                        </li>
+                                                            <li class="${tag == i?"current active" :""}">
+                                                                <a rel="nofollow" href="list_product?index=${i}" class="disabled js-search-link">
+                                                                        ${i}
+                                                                </a>
+                                                            </li>
                                                         </c:forEach>
                                                     </ul>
                                                 </div>

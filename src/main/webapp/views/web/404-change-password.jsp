@@ -52,7 +52,7 @@
                 <p>Link thay đổi mật khẩu đã hết hạn sứ dụng! Vui lòng lấy link liên kết mới.
                   Nếu lỗi vẫn tiếp diễn vui lòng liên hệ với Quản trị viên của trang web này và báo cáo lỗi bên trên. </p>
               </div>
-              <a class="btn btn-default" href="<c:url value="/home"/>">
+              <a class="btn btn-default" href="/home">
                 <i class="fa fa-home" aria-hidden="true"></i>
                 <span>Trở lại trang chủ</span>
               </a>
