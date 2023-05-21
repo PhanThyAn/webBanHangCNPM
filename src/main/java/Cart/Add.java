@@ -36,7 +36,7 @@ public class Add extends HttpServlet {
 
         cart.put(p);// dua sp vao gio
         request.getSession().setAttribute("cart",cart); // luu thong tin gio hang
-        response.sendRedirect("/cart_detail"); // chuyen huong trang
+        response.sendRedirect("/WebCNPM/cart_detail"); // chuyen huong trang
     }
 
     @Override

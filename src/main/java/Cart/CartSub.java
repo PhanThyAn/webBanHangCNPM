@@ -27,7 +27,7 @@ public class CartSub extends HttpServlet {
         Cart cart = (Cart) request.getSession().getAttribute("cart"); // lay thong tin gi hang
         cart.sub(p); // giam so luong san pham
         request.getSession().setAttribute("cart",cart); // luu thong tin gio hang
-        response.sendRedirect("/cart_detail");
+        response.sendRedirect("/WebCNPM/cart_detail");
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

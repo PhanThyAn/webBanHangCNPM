@@ -95,10 +95,10 @@
 
                                                                         <span class="input-group-btn-vertical">
                                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
-                                                                               <a class="add-cart" href="/cart/add?id=<%=p.product_id%>">+</a>
+                                                                               <a class="add-cart" href="/WebCNPM/cart/add?id=<%=p.product_id%>">+</a>
                                                                             </button>
                                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
-                                                                                <a class="add-cart" href="/cart/sub?id=<%=p.product_id%>">-</a>
+                                                                                <a class="add-cart" href="/WebCNPM/cart/sub?id=<%=p.product_id%>">-</a>
                                                                             </button>
                                                                         </span>
                                                                     </div>
@@ -112,7 +112,7 @@
                                                                 </div>
                                                                 <div class="col-md-2 col text-xs-right align-self-end">
                                                                     <div class="cart-line-product-actions ">
-                                                                        <a class="remove-from-cart" rel="nofollow" href="/cart/del?id=<%=p.getProduct_id()%>" data-link-action="delete-from-cart" data-id-product="1">
+                                                                        <a class="remove-from-cart" rel="nofollow" href="/WebCNPM/cart/del?id=<%=p.getProduct_id()%>" data-link-action="delete-from-cart" data-id-product="1">
                                                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                                         </a>
                                                                     </div>
@@ -125,7 +125,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <a href="/checkout" class="continue btn btn-primary pull-xs-right">
+                                    <a href="/WebCNPM/checkout" class="continue btn btn-primary pull-xs-right">
                                         Tiếp tục
                                     </a>
                                 </div>

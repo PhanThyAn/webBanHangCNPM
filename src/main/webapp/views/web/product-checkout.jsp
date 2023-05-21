@@ -258,7 +258,7 @@
                                                     <div class="row">
                                                         <%-- Usecase 5 - Đặt hàng: 7. Nhấp chọn hoàn tất đă hàng--%>
                                                         <button type="submit">
-                                                            <a href="/order_success"
+                                                            <a href="/WebCNPM/order_success"
                                                                class="continue btn btn-primary pull-xs-right" value="3"
                                                                style="margin-top: 15px;margin-bottom: 25px">Hoàn tất đặt
                                                                 hàng</a>
