@@ -67,22 +67,22 @@
                                         <div class="cart-overview js-cart">
                                             <ul class="cart-items">
                                                 <%  Collection<Product> list = cart.getListProduct();
-                                                    for (Product p: list) {%>
+                                                    for (Product p: list) {%> <!-- lay ds sp trong gio hang va hien thi giao dien-->
                                                 <li class="cart-item">
                                                     <div class="product-line-grid row justify-content-between">
                                                         <div class="product-line-grid-left col-md-2">
                                                             <span class="product-image media-middle">
-                                                                <a href="/product_detail?id=<%=p.getProduct_id()%>">
-                                                                    <img class="img-fluid" src="<%=p.getImage(0)%>" alt="">
+                                                                <a href="/product_detail?id=<%=p.getProduct_id()%>"><!--lay id-->
+                                                                    <img class="img-fluid" src="<%=p.getImage(0)%>" alt=""><!--lay hinh-->
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div class="product-line-grid-body col-md-6">
                                                             <div class="product-line-info">
-                                                                <a class="label" href="/product_detail?id=<%=p.getProduct_id()%>" data-id_customization="0"><%=p.getName()%></a>
+                                                                <a class="label" href="/product_detail?id=<%=p.getProduct_id()%>" data-id_customization="0"><%=p.getName()%> <!--lay ten--></a>
                                                             </div>
                                                             <div class="product-line-info product-price">
-                                                                <span class="value"><%=p.getPrice_sell()%> vnđ</span>
+                                                                <span class="value"><%=p.getPrice_sell()%> vnđ <!--lay gia ban--></span>
                                                             </div>
 
                                                         </div>
@@ -91,7 +91,7 @@
                                                                 <div class="col-md-5 col qty">
                                                                     <div class="label">Qty:</div>
                                                                     <div class="quantity">
-                                                                        <input type="text" name="qty" value="<%=p.getQuantity()%>" class="input-group form-control">
+                                                                        <input type="text" name="qty" value="<%=p.getQuantity()%> " class="input-group form-control"><!--lay so luong-->
 
                                                                         <span class="input-group-btn-vertical">
                                                                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
@@ -133,7 +133,7 @@
                                     <div class="cart-summary">
                                         <div class="cart-detailed-totals">
                                             <div class="cart-summary-products">
-                                                <div class="summary-label">Có ${cart.quantity} sản phẩm trong giỏ hàng của bạn</div>
+                                                <div class="summary-label">Có ${cart.quantity} <!--lay sl-->sản phẩm trong giỏ hàng của bạn</div>
                                             </div>
                                             <div class="cart-summary-line" id="cart-subtotal-products">
                                                 <span class="label js-subtotal">
