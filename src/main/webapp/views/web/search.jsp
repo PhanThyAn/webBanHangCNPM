@@ -170,6 +170,7 @@
                             </div>
                         </div>
                     </c:if>
+                    <%--       Basic Flow: 6.1 Nếu kết quả tìm kiếm không null thì trang seach sẽ hiển thị thông tin các sản phẩm.--%>
                     <c:if test="${listPro != null}">
                         <div class="container">
                             <div class="content">
