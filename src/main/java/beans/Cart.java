@@ -95,5 +95,4 @@ public class Cart implements Serializable {
         }
         updateTotalAndQ();
     }
-
 }
