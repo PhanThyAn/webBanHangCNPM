@@ -10,6 +10,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "CartSub", value = "/cart/sub")
+// them sl sp
 public class CartSub extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,13 +24,12 @@ public class CartSub extends HttpServlet {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        Cart cart = (Cart) request.getSession().getAttribute("cart");
-        cart.sub(p);
+        Cart cart = (Cart) request.getSession().getAttribute("cart"); // lay thong tin gi hang
+        cart.sub(p); // giam so luong san pham
 
-        request.getSession().setAttribute("cart",cart);
-        response.sendRedirect("/WebCNPM/cart_detail");
+        request.getSession().setAttribute("cart",cart); // luu thong tin gio hang
+        response.sendRedirect("/cart_detail");
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
