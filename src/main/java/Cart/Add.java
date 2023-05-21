@@ -21,6 +21,7 @@ public class Add extends HttpServlet {
          // chuyen id thanh so nguyen
         int pid = Integer.parseInt(id);
         Product p = null;
+
         try {
             p = ProductService.getProductById(pid); //gan product co id la pid cho p
         } catch (Exception e) {
