@@ -30,7 +30,6 @@ public class CartSub extends HttpServlet {
         request.getSession().setAttribute("cart",cart); // luu thong tin gio hang
         response.sendRedirect("/cart_detail");
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -35,7 +35,6 @@ public class CartDel extends HttpServlet {
         request.getSession().setAttribute("cart",cart);
         response.sendRedirect("/WebCNPM/cart_detail");
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

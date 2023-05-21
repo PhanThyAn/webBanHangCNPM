@@ -64,13 +64,13 @@
                                     <div class="cart-overview js-cart">
                                         <ul class="cart-items">
                                             <%  Collection<Product> list = cart.getListProduct();
-                                                for (Product p: list) {%>
+                                                for (Product p: list) {%> <!-- lay ds sp trong gio hang va hien thi giao dien-->
                                             <li class="cart-item">
                                                 <div class="product-line-grid row justify-content-between">
                                                     <div class="product-line-grid-left col-md-2">
                                                             <span class="product-image media-middle">
-                                                                <a href="/WebCNPM/product_detail?id=<%=p.getProduct_id()%>">
-                                                                    <img class="img-fluid" src="<%=p.getImage(0)%>" alt="">
+                                                                <a href="/WebCNPM/product_detail?id=<%=p.getProduct_id()%>"><!--lay id-->
+                                                                    <img class="img-fluid" src="<%=p.getImage(0)%>" alt=""><!--lay hinh-->
                                                                 </a>
                                                             </span>
                                                     </div>
@@ -79,7 +79,7 @@
                                                             <a class="label" href="/WebCNPM/product_detail?id=<%=p.getProduct_id()%>" data-id_customization="0"><%=p.getName()%></a>
                                                         </div>
                                                         <div class="product-line-info product-price">
-                                                            <span class="value"><%=p.getPrice_sell()%> vnđ</span>
+                                                            <span class="value"><%=p.getPrice_sell()%> vnđ</span><!--lay gia ban-->
                                                         </div>
 
                                                     </div>
@@ -88,6 +88,7 @@
                                                             <div class="col-md-5 col qty">
                                                                 <div class="label">Qty:</div>
                                                                 <div class="quantity">
+                                                                    <!--lay sl-->
                                                                     <input type="text" name="qty" value="<%=p.getQuantity()%>" class="input-group form-control">
 
                                                                     <span class="input-group-btn-vertical">
@@ -100,7 +101,7 @@
                                                                         </span>
                                                                 </div>
                                                             </div>
-                                                            <% long priceI = (p.getPrice_sell())*(p.getQuantity()); %>
+                                                            <% long priceI = (p.getPrice_sell())*(p.getQuantity()); %> 
                                                             <div class="col-md-5 col price">
                                                                 <div class="label">Tổng:</div>
                                                                 <div class="product-price total">
