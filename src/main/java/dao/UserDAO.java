@@ -6,7 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO {
 
@@ -16,15 +17,14 @@ public class UserDAO {
         PreparedStatement pst;
         String sql;
         try {
-            sql = "select uid,user_name,password,role,enable from USER where user_name = ? and password = ?";
+            sql = "select uid,user_name,password,role from user where user_name = ? and password = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setString(1, username);
             pst.setString(2, password);
             rs = pst.executeQuery();
             while (rs.next()) {
-                user = new UserModel(rs.getInt("uid"), rs.getString("user_name"), rs.getString("password"), rs.getInt("role"), rs.getInt("enable"));
+                user = new UserModel(rs.getInt("uid"), rs.getString("user_name"), rs.getString("password"), rs.getInt("role"),1);
             }
-            System.out.println(user.getUserName());
             return user;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -38,7 +38,7 @@ public class UserDAO {
         PreparedStatement pst;
         String sql;
         try {
-            sql = "select * from USER where uid = ?";
+            sql = "select * from user where uid = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setInt(1, id);
             rs = pst.executeQuery();
@@ -59,7 +59,7 @@ public class UserDAO {
         PreparedStatement pst;
         String sql;
         try {
-            sql = "select * from USER where user_name = ? and email = ?";
+            sql = "select * from user where user_name = ? and email = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setString(1, username);
             pst.setString(2, email);
@@ -139,7 +139,7 @@ public class UserDAO {
         String sql;
         ResultSet rs;
         try {
-            sql = "select * from USER where " + col + " = ?";
+            sql = "select * from user where " + col + " = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setString(1, value);
             rs = pst.executeQuery();
@@ -158,7 +158,7 @@ public class UserDAO {
         String sql;
         try {
             users = new ArrayList<>();
-            sql = "select * from USER";
+            sql = "select * from user";
             pst = DBConnection.getConnection().prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()) {
@@ -176,7 +176,7 @@ public class UserDAO {
         PreparedStatement pst;
         String sql;
         try {
-            sql = "insert into USER (user_name,password,full_name,role,email,enable) values(?,?,?,?,?,?)";
+            sql = "insert into user (user_name,password,full_name,role,email,enable) values(?,?,?,?,?,?)";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setString(1, user.getUserName());
             pst.setString(2, user.getPassWord());
@@ -194,7 +194,7 @@ public class UserDAO {
         PreparedStatement pst;
         String sql;
         try {
-            sql = "update USER set full_name = ?, email = ?,role = ?, enable = ? where uid = ?";
+            sql = "update user set full_name = ?, email = ?,role = ?, enable = ? where uid = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setString(1, user.getFullName());
             pst.setString(2, user.getEmail());
@@ -212,7 +212,7 @@ public class UserDAO {
         String sql;
         try {
             deleteUserForgetPassword(id);
-            sql = "delete from USER where uid = ?";
+            sql = "delete from user where uid = ?";
             pst = DBConnection.getConnection().prepareStatement(sql);
             pst.setInt(1, id);
             pst.executeUpdate();
@@ -345,6 +345,13 @@ public class UserDAO {
         }
     }
 
+    public static void main(String[] args) {
+        try {
+            System.out.println(findLogin("dung","123"));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     private static void deleteUserForgetPassword(int id)  throws Exception{
         PreparedStatement pst;
         String sql;
@@ -355,14 +362,6 @@ public class UserDAO {
             pst.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args) {
-        try {
-            System.out.println(findLogin("luan","12345"));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 }
