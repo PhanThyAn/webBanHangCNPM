@@ -295,7 +295,7 @@
                                                                             </span>
                                                                     </div>
                                                                     <span class="add">
-                                                                           <a class="addToWishlist" href="<c:url value="/cart/add?id=${pro.product_id}"></c:url>">
+                                                                           <a class="addToWishlist" href="/WebCNPM/cart/add?id=${pro.product_id}">
                                                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
                                                                             <a class="addToWishlist" href="#">
