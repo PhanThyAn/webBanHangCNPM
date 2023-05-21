@@ -1,11 +1,9 @@
 package dao;
 
 
-import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 public class DBConnection {
@@ -20,7 +18,7 @@ public class DBConnection {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://"+serverName+":"+portNumber+"/"+dbName;
             String user = "root";
-            String pass = "";
+            String pass = "123456789";
             return  DriverManager.getConnection(url,user,pass);
 
         } catch (ClassNotFoundException e) {
